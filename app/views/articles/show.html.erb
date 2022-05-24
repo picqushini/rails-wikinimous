@@ -1,0 +1,9 @@
+<h1> <%= link_to("Wikinimous", articles_path) %> </h1>
+
+<div class="container">
+
+  <h1><%= @article.title %> <%= link_to("🖊️", edit_article_path(@article.id)) %> <%= link_to("🗑︎", article_path(@article.id), method: :delete, data: {confirm: "Are you sure you want to delete that?"} ) %> </h1>
+  <p><%= @article.content %></p>
+
+
+</div>
